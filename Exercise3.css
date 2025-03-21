@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Sofia", sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f4f4f4;
+    color: #000000;
+    border-bottom: 1px solid #ddd;
+}
+
+body.dark-mode header,
+body.dark-mode header nav ul li a {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin: 0 1rem;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.intro {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem 1rem;
+}
+
+.content > div {
+    flex: 1 1 calc(33.333% - 1rem);
+    background-color: #f4f4f4;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+body.dark-mode .content > div,
+body.dark-mode .reviews .review,
+body.dark-mode .intro,
+body.dark-mode footer {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border-color: #333333;
+}
+
+.content h2 {
+    margin-bottom: 1rem;
+}
+
+.reviews {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.reviews .review {
+    display: inline-block;
+    width: calc(33.333% - 1rem);
+    margin: 0.5rem;
+    padding: 1rem;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f4f4f4;
+    border-top: 1px solid #ddd;
+}
+
+#darkModeToggle {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#darkModeToggle:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .content > div {
+        flex: 1 1 100%;
+    }
+
+    .reviews .review {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; 
+        align-items: center;    
+        text-align: center;     
+    }
+
+    header nav ul {
+        flex-direction: column; 
+        gap: 0.5rem;            
+    }
+
+    header nav ul li {
+        margin: 0; 
+    }
+}
